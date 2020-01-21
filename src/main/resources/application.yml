@@ -1,11 +1,27 @@
 server:
   port: 9092
-spring:  datasource:    url: jdbc:oracle:thin:@localhost:1521:orcl
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
     driver-class-name: oracle.jdbc.OracleDriver
     username: scott
-    password: tiger  jpa:    hibernate:      ddl-auto: update
+    password: tiger
+  jpa:
+    hibernate:
+      ddl-auto: update
     database-platform: org.hibernate.dialect.Oracle10gDialect
-  mvc:    view:      prefix: /pages/
+
+  mvc:
+    view:
+      prefix: /pages/
       suffix: .jsp
   thymeleaf:
     cache: false
+  mail:
+    host: smpt.gmail.com
+    port: 587
+    username: bichitraghadai15@gmail.com
+    password: bichitra@12
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
