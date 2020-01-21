@@ -1,0 +1,11 @@
+server:
+  port: 9092
+spring:  datasource:    url: jdbc:oracle:thin:@localhost:1521:orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: scott
+    password: tiger  jpa:    hibernate:      ddl-auto: update
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+  mvc:    view:      prefix: /pages/
+      suffix: .jsp
+  thymeleaf:
+    cache: false
